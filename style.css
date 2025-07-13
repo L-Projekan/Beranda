@@ -8,6 +8,7 @@
     --dark: #2b2d42;
     --light: #f8f9fa;
     --gray: #8d99ae;
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
 @font-face {
@@ -98,6 +99,29 @@ header p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Order Button Styles */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* jika mau di tengah vertikal juga */
+}
+
+.order-btn {
+    background-color: rgb(213, 203, 255);
+    color: var(--secondary);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: rgba(107, 99, 255, 0.1);
+    z-index: 3;
+}
+
+
 /* Untuk tampilan mobile */
 @media (max-width: 768px) {
     .header-content {
@@ -128,9 +152,7 @@ section {
 
 .about,
 .services,
-.contact,
-.footer-column,
-.footer-content {
+.contact {
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -187,31 +209,157 @@ h2 {
 }
 
 /* ===== CONTACT STYLES ===== */
+.contact {
+    text-align: center;
+}
+
 .contact p {
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 1.2rem;
+    margin: 15px 0;
 }
 
 .contact a {
     color: var(--primary);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 50px;
+    background: rgba(107, 99, 255, 0.1);
     transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
 }
 
 .contact a:hover {
-    color: var(--secondary);
-    transform: translateX(5px);
+    background: var(--primary);
+    color: white;
+    transform: scale(1.05);
 }
 
-.contact a::before {
-    content: "➤";
-    margin-right: 5px;
-    font-size: 0.8rem;
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px) rotate(10deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon i {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", sans-serif;
+}
+
+/* ===== MODAL STYLES ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 10, 28, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    padding: 2.5rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 30px rgba(107, 99, 255, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    color: var(--accent);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    color: var(--accent-light);
+    transform: scale(1.1);
+}
+
+.modal h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    background: rgba(21, 40, 82, 0.5);
+    color: white;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-light);
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.submit-btn {
+    background: var(--primary);
+    color: white;
+    border: var(--light);
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--accent);
 }
 
 /* ===== FOOTER STYLES ===== */
@@ -284,13 +432,4 @@ footer {
     h2 {
         font-size: 1.5rem;
     }
-}
-
-/* Bagian "Versi Full Up" */
-
-.copyright {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #ffffff;
-    text-align: center;
 }
