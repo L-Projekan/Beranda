@@ -9,9 +9,7 @@
     <title>L-Projekan</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/icon/studiotag.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
 </head>
 
 <body>
@@ -25,13 +23,21 @@
         </div>
     </header>
 
-    <section class="about">
+    <nav>
+        <div class="nav-container">
+            <a href="#about" class="nav-link">Tentang</a>
+            <a href="#services" class="nav-link">Layanan</a>
+            <a href="#contact" class="nav-link">Kontak</a>
+        </div>
+    </nav>
+
+    <section class="about" id="about">
         <h2>Tentang Kami</h2>
         <p>L-Projekan adalah jasa kekinian yang siap bantu kamu garap tugas, desain, coding, atau kebutuhan digital
             lainnya. Profesional, cepat, dan terjangkau.</p>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <h2>Layanan Kami</h2>
         <ul>
             <li>Jasa joki tugas sekolah/kuliah</li>
@@ -45,19 +51,19 @@
     </section>
 
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2>Hubungi Kami</h2>
+        <p class="section-subtitle">Jangan ragu menghubungi kami melalui media berikut</p>
         <p>DM Instagram: <a href="https://instagram.com/lprojekan">@lprojekan</a></p>
         <p>Email: <a href="mailto:lprojekan@gmail.com">lprojekan@gmail.com</a></p>
-
         <div class="social-icons">
-            <a href="https://www.instagram.com/kimzul1945" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://instagram.com/lprojekan" class="social-icon"><i class="fab fa-instagram"></i></a>
             <a href="https://wa.me/6281234567890" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:lprojekan@gmail.com" class="social-icon"><i class="fa fa-envelope"></i></a>
+            <a href="mailto:lprojekan@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
         </div>
     </section>
 
-    <div class="modal" id="orderModal">
+    <div class="modal" id="orderModal" id="order">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2>Form Pemesanan</h2>
