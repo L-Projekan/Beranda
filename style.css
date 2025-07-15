@@ -184,12 +184,20 @@ nav {
         height: 70px;
         width: 70px;
     }
+
+    .iframe {
+        height: 350px;
+    }    
 }
 
 @media (max-width: 480px) {
     .logo {
         height: 60px;
         width: 60px;
+    }
+
+    .iframe {
+        height: 220px;
     }
 }
 
