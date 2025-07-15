@@ -36,8 +36,10 @@ body {
     background-color: #f0f2f5;
 }
 
-#about, #services, #contact {
-  scroll-margin-top: 70px;
+#about,
+#services,
+#contact {
+    scroll-margin-top: 70px;
 }
 
 /* ===== HEADER STYLES ===== */
@@ -368,54 +370,15 @@ h2 {
     color: white;
 }
 
-.form-group {
-    margin-bottom: 1.2rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: white;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
+.iframe {
     width: 100%;
-    padding: 12px;
+    height: 500px;
+    padding: 10px;
     border-radius: 8px;
     border: 1px solid var(--accent);
     background: rgba(21, 40, 82, 0.5);
     color: white;
     font-size: 1rem;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-light);
-    box-shadow: 0 0 10px var(--accent);
-}
-
-.submit-btn {
-    background: var(--primary);
-    color: white;
-    border: var(--light);
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: block;
-    width: 100%;
-    margin-top: 1rem;
-}
-
-.submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 20px var(--accent);
 }
 
 /* ===== FOOTER STYLES ===== */
@@ -433,7 +396,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
-
+    
     to {
         opacity: 1;
         transform: translateY(0);
@@ -459,7 +422,7 @@ footer {
     header h1 {
         font-size: 2rem;
     }
-
+    
     header p {
         font-size: 1rem;
     }
@@ -474,7 +437,7 @@ footer {
         padding: 1.5rem;
         margin: 1.5rem auto;
     }
-
+    
     .services ul {
         grid-template-columns: 1fr;
     }
@@ -484,8 +447,60 @@ footer {
     header {
         padding: 2rem 1rem;
     }
-
+    
     h2 {
         font-size: 1.5rem;
     }
 }
+
+/* YANG GAK KEPAKAI */
+
+    /* .form-group {
+        margin-bottom: 1.2rem;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: white;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid var(--accent);
+        background: rgba(21, 40, 82, 0.5);
+        color: white;
+        font-size: 1rem;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--accent-light);
+        box-shadow: 0 0 10px var(--accent);
+    } 
+
+    .submit-btn {
+        background: var(--primary);
+        color: white;
+        border: var(--light);
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .submit-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px var(--accent);
+    } */
