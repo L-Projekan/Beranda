@@ -187,7 +187,7 @@ nav {
 
     .iframe {
         height: 350px;
-    }    
+    }
 }
 
 @media (max-width: 480px) {
@@ -226,13 +226,60 @@ section:hover {
 h2 {
     font-size: 1.8rem;
     color: var(--primary);
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid var(--accent);
-    display: inline-block;
+    /* margin-bottom: 1.5rem; */
+    /* padding-bottom: 0.5rem; */
+    /* border-bottom: 3px solid var(--accent); */
+    /* display: inline-block; */
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(67, 97, 238, 0.05);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(67, 97, 238, 0.1);
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: rgba(67, 97, 238, 0.3);
+}
+
+.feature-icon {
+    background: var(--gradient);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.feature-content h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
 }
 
 /* ===== SERVICES STYLES ===== */
+
+.services h2 {
+    text-align: center;
+}
+
 .services ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -326,7 +373,7 @@ h2 {
     background: var(--gradient-light);
 }
 
-.social-icon i {
+.social-icon i, .feature i {
     font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "FontAwesome", sans-serif !important;
     font-weight: 900;
 }
@@ -404,7 +451,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
-    
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -430,7 +477,7 @@ footer {
     header h1 {
         font-size: 2rem;
     }
-    
+
     header p {
         font-size: 1rem;
     }
@@ -445,7 +492,7 @@ footer {
         padding: 1.5rem;
         margin: 1.5rem auto;
     }
-    
+
     .services ul {
         grid-template-columns: 1fr;
     }
@@ -455,7 +502,7 @@ footer {
     header {
         padding: 2rem 1rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }
@@ -463,7 +510,7 @@ footer {
 
 /* YANG GAK KEPAKAI */
 
-    /* .form-group {
+/* .form-group {
         margin-bottom: 1.2rem;
     }
     
