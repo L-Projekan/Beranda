@@ -44,8 +44,7 @@ body {
 
 /* ===== HEADER STYLES ===== */
 header {
-/*     background: linear-gradient(135deg, var(--primary), var(--secondary)); */
-    background: url("assets/icon/studiotag.ico") center/cover no-repeat;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
     text-align: center;
     padding: 3rem 1rem;
