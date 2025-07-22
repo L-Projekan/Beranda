@@ -129,6 +129,29 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Ambil elemen tombol dan modal
+const ctaButton = document.querySelector('.cta-button');
+const modal = document.getElementById('orderModal');
+const closeBtn = document.querySelector('.close-btn');
+
+// Saat tombol ditekan, tampilkan modal
+ctaButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'block';
+});
+
+// Saat tombol close ditekan, sembunyikan modal
+closeBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+});
+
+// Sembunyikan modal jika klik di luar modal-content
+window.addEventListener('click', function(e) {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
 // FAQ FUNCTIONALITY - FIXED VERSION
 const faqQuestions = document.querySelectorAll(".faq-question");
 
