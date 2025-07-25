@@ -120,34 +120,22 @@ header p {
 
 /* Logo Styles */
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: rgb(255, 255, 255);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: flex;
+    align-items: center;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
 }
 
-.logo:hover {
-    transform: scale(1.05);
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-.logo::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--gradient);
-    transition: width 0.3s ease;
-}
-
-.logo:hover::after {
-    width: 100%;
+.logo:hover .logo-img {
+    transform: scale(1.1);
 }
 
 /* Navigation Menu */
