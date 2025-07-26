@@ -12,8 +12,8 @@ html {
     --dark: #9aa7b7;
     --light: #848c94;
     --gray: #848494;
-    --gradient: linear-gradient(135deg, #4b6281, #3f37c9);
-    --gradient-light: linear-gradient(135deg, #4895ef, #8e4ec9);
+    --gradient: #4b6281;
+    --gradient-light: #4b6281;
 }
 
 @font-face {
@@ -32,7 +32,7 @@ html {
 body {
     font-family: 'CrimsonPro', 'Poppins', sans-serif;
     line-height: 1.6;
-    color: var(--dark);
+    color: var(--secondary);
     background-color: #f0f4fa;
 }
 
@@ -314,6 +314,24 @@ header p {
         top: 65px;
         height: calc(100vh - 65px);
     }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 15px 30px;
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .cta-button {
+        margin-top: 2rem;
+        padding: 15px 35px;
+        font-size: 1.1rem;
+    }
 }
 
 /* Demo Content */
@@ -436,7 +454,7 @@ section {
 .contact,
 .faq,
 .testimonials {
-    background: white;
+    background: var(--accent);
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     margin: 2rem auto;
