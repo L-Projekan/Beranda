@@ -122,8 +122,8 @@ header p {
 }
 
 .logo-img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
