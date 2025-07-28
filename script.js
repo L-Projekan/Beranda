@@ -162,30 +162,6 @@ faqQuestions.forEach((question) => {
   });
 });
 
-// Scroll animations (optional)
-// function animateOnScroll() {
-//   const elements = document.querySelectorAll(".testimonial-card, .faq-item, .service-card");
-
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           entry.target.style.opacity = 1;
-//           entry.target.style.transform = "translateY(0)";
-//           observer.unobserve(entry.target);
-//         }
-//       });
-//     },
-//     { threshold: 0.1 }
-//   );
-
-//   elements.forEach((el) => {
-//     el.style.opacity = 0;
-//     el.style.transform = "translateY(30px)";
-//     el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-//     observer.observe(el);
-//   });
-// }
 
 // Navbar functionality
 const navbar = document.getElementById("navbar");
