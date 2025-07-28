@@ -116,16 +116,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll("section").forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-
-    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-      const currentId = section.getAttribute("id");
-      document.querySelectorAll(".nav-link").forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${currentId}`) {
-          link.classList.add("active");
-        }
-      });
-    }
   });
 });
 
@@ -173,29 +163,29 @@ faqQuestions.forEach((question) => {
 });
 
 // Scroll animations (optional)
-function animateOnScroll() {
-  const elements = document.querySelectorAll(".testimonial-card, .faq-item, .service-card");
+// function animateOnScroll() {
+//   const elements = document.querySelectorAll(".testimonial-card, .faq-item, .service-card");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = "translateY(0)";
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           entry.target.style.opacity = 1;
+//           entry.target.style.transform = "translateY(0)";
+//           observer.unobserve(entry.target);
+//         }
+//       });
+//     },
+//     { threshold: 0.1 }
+//   );
 
-  elements.forEach((el) => {
-    el.style.opacity = 0;
-    el.style.transform = "translateY(30px)";
-    el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-    observer.observe(el);
-  });
-}
+//   elements.forEach((el) => {
+//     el.style.opacity = 0;
+//     el.style.transform = "translateY(30px)";
+//     el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+//     observer.observe(el);
+//   });
+// }
 
 // Navbar functionality
 const navbar = document.getElementById("navbar");
@@ -229,21 +219,21 @@ navLinks.forEach((link) => {
 });
 
 // Scroll effects
-let lastScrollTop = 0;
+// let lastScrollTop = 0;
 
-window.addEventListener("scroll", () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+// window.addEventListener("scroll", () => {
+//   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   // Add scrolled class for blur effect
-  if (scrollTop > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
+  // if (scrollTop > 50) {
+  //   navbar.classList.add("scrolled");
+  // } else {
+  //   navbar.classList.remove("scrolled");
+  // }
 
   // Update scroll indicator
-  const scrollPercent = (scrollTop / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-  scrollIndicator.style.width = scrollPercent + "%";
+  // const scrollPercent = (scrollTop / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  // scrollIndicator.style.width = scrollPercent + "%";
 
   // Hide/show navbar on scroll (optional)
   /*
@@ -254,8 +244,8 @@ window.addEventListener("scroll", () => {
             }
             */
 
-  lastScrollTop = scrollTop;
-});
+//   lastScrollTop = scrollTop;
+// });
 
 // Active link highlighting
 function setActiveLink() {
@@ -299,83 +289,83 @@ navLinks.forEach((link) => {
 });
 
 // Create floating particles
-function createParticle() {
-  const particle = document.createElement("div");
-  particle.className = "particle";
-  particle.style.left = Math.random() * 100 + "vw";
-  particle.style.animationDelay = Math.random() * 6 + "s";
-  particle.style.animationDuration = Math.random() * 3 + 3 + "s";
-  document.getElementById("particles").appendChild(particle);
+// function createParticle() {
+//   const particle = document.createElement("div");
+//   particle.className = "particle";
+//   particle.style.left = Math.random() * 100 + "vw";
+//   particle.style.animationDelay = Math.random() * 6 + "s";
+//   particle.style.animationDuration = Math.random() * 3 + 3 + "s";
+//   document.getElementById("particles").appendChild(particle);
 
-  setTimeout(() => {
-    particle.remove();
-  }, 6000);
-}
+//   setTimeout(() => {
+//     particle.remove();
+//   }, 6000);
+// }
 
 // Generate particles
-setInterval(createParticle, 300);
+// setInterval(createParticle, 300);
 
 // Add mouse move effect to navbar
-navbar.addEventListener("mousemove", (e) => {
-  const rect = navbar.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
+// navbar.addEventListener("mousemove", (e) => {
+//   const rect = navbar.getBoundingClientRect();
+//   const x = e.clientX - rect.left;
+//   const y = e.clientY - rect.top;
 
-  navbar.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(67, 97, 238, 0.1) 0%, rgba(43, 45, 66, 0.95) 50%)`;
-});
+//   navbar.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(67, 97, 238, 0.1) 0%, rgba(43, 45, 66, 0.95) 50%)`;
+// });
 
-navbar.addEventListener("mouseleave", () => {
-  navbar.style.background = "rgba(43, 45, 66, 0.95)";
-});
+// navbar.addEventListener("mouseleave", () => {
+//   navbar.style.background = "rgba(43, 45, 66, 0.95)";
+// });
 
 // Add ripple effect to navigation links
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    const ripple = document.createElement("span");
-    const rect = link.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-    const x = e.clientX - rect.left - size / 2;
-    const y = e.clientY - rect.top - size / 2;
+// navLinks.forEach((link) => {
+//   link.addEventListener("click", (e) => {
+//     const ripple = document.createElement("span");
+//     const rect = link.getBoundingClientRect();
+//     const size = Math.max(rect.width, rect.height);
+//     const x = e.clientX - rect.left - size / 2;
+//     const y = e.clientY - rect.top - size / 2;
 
-    ripple.style.width = ripple.style.height = size + "px";
-    ripple.style.left = x + "px";
-    ripple.style.top = y + "px";
-    ripple.style.position = "absolute";
-    ripple.style.borderRadius = "50%";
-    ripple.style.background = "rgba(255, 255, 255, 0.3)";
-    ripple.style.transform = "scale(0)";
-    ripple.style.animation = "ripple 0.6s linear";
-    ripple.style.pointerEvents = "none";
+//     ripple.style.width = ripple.style.height = size + "px";
+//     ripple.style.left = x + "px";
+//     ripple.style.top = y + "px";
+//     ripple.style.position = "absolute";
+//     ripple.style.borderRadius = "50%";
+//     ripple.style.background = "rgba(255, 255, 255, 0.3)";
+//     ripple.style.transform = "scale(0)";
+//     ripple.style.animation = "ripple 0.6s linear";
+//     ripple.style.pointerEvents = "none";
 
-    const rippleContainer = link.querySelector(".ripple-container");
-    if (rippleContainer) {
-      rippleContainer.appendChild(ripple);
-    } else {
-      const container = document.createElement("div");
-      container.className = "ripple-container";
-      container.style.position = "absolute";
-      container.style.top = "0";
-      container.style.left = "0";
-      container.style.width = "100%";
-      container.style.height = "100%";
-      container.style.overflow = "hidden";
-      container.style.borderRadius = "50px";
-      link.appendChild(container);
-      container.appendChild(ripple);
-    }
+//     const rippleContainer = link.querySelector(".ripple-container");
+//     if (rippleContainer) {
+//       rippleContainer.appendChild(ripple);
+//     } else {
+//       const container = document.createElement("div");
+//       container.className = "ripple-container";
+//       container.style.position = "absolute";
+//       container.style.top = "0";
+//       container.style.left = "0";
+//       container.style.width = "100%";
+//       container.style.height = "100%";
+//       container.style.overflow = "hidden";
+//       container.style.borderRadius = "50px";
+//       link.appendChild(container);
+//       container.appendChild(ripple);
+//     }
 
-    setTimeout(() => ripple.remove(), 600);
-  });
-});
+//     setTimeout(() => ripple.remove(), 600);
+//   });
+// });
 
 // Add CSS for ripple animation
-const style = document.createElement("style");
-style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-document.head.appendChild(style);
+// const style = document.createElement("style");
+// style.textContent = `
+//             @keyframes ripple {
+//                 to {
+//                     transform: scale(4);
+//                     opacity: 0;
+//                 }
+//             }
+//         `;
+// document.head.appendChild(style);
