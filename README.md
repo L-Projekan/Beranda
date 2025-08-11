@@ -1,4 +1,4 @@
-# README - Website L-Projekan
+# Website L-Projekan
 
 ![L-Projekan Logo](assets/images/L1.png)
 
