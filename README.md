@@ -39,7 +39,7 @@ Website L-Projekan adalah platform digital yang menawarkan berbagai layanan krea
 ## Cara Menjalankan
 1. Clone repositori:
    ```bash
-   git clone https://github.com/username/l-projekan-website.git
+   git clone https://github.com/L-Projekan/Beranda
    ```
 2. Buka file `index.html` di browser modern
 3. Tidak perlu server khusus - website berjalan secara statis
