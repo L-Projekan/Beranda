@@ -1,6 +1,6 @@
 # README - Website L-Projekan
 
-![L-Projekan Logo](assets\icon\L1 (1).png)
+![L-Projekan Logo](assets\icon\L1(1).png)
 
 ## Deskripsi Proyek
 Website L-Projekan adalah platform digital yang menawarkan berbagai layanan kreatif profesional untuk kebutuhan akademis dan bisnis. Website ini dirancang untuk:
@@ -82,3 +82,5 @@ Proyek ini dilisensikan di bawah [All Rights Reserved](https://en.wikipedia.org/
 
 #### Cloudflare version of Web Link
 https://l-projekan.pages.dev
+
+
