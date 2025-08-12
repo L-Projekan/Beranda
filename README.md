@@ -1,6 +1,7 @@
-# L-Projekan Website
+# L-Projekan Website Version 1.0
 
 ![L-Projekan Logo](assets/images/L1.png)
+_This website will be updated gradually in the future._
 
 ## Project Description
 The L-Projekan website is a digital platform offering various professional creative services for academic and business needs. This website is designed to:
@@ -82,3 +83,5 @@ This project is licensed under [All Rights Reserved](https://en.wikipedia.org/wi
 
 #### Cloudflare version of Web Link
 https://l-projekan.pages.dev
+
+
