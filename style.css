@@ -285,9 +285,9 @@ header p {
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: none;
     gap: 20px;
-    margin-top: 30px;
+    margin: 20px 500px;
 }
 
 .feature {
@@ -326,6 +326,18 @@ header p {
 }
 
 /* Bagian Service */
+.service {
+    padding: 50px 20px;
+    position: relative;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
 .services h2 {
     text-align: center;
 }
@@ -477,8 +489,12 @@ header p {
 
 /* Bagian Testimoni */
 .testimonials {
-    padding: 50px 20px;
+    .testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
+    z-index: 1;
+}
 }
 
 
